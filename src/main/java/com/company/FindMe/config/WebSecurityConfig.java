@@ -1,5 +1,6 @@
 package com.company.FindMe.config;
 
+import com.company.FindMe.security.JwtAuthFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
