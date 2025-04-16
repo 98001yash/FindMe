@@ -1,11 +1,13 @@
 package com.company.FindMe.entities;
 
 
+import com.company.FindMe.enums.ReportStatus;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -25,7 +27,7 @@ public class MissingPersonReport {
     private String gender;
     private String lastLocation;
     private String description;
-    private LocalDateTime missingSince;
+    private LocalDate missingSince;
 
 
     @Enumerated(EnumType.STRING)
