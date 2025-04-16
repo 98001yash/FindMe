@@ -26,7 +26,7 @@ public class MissingPersonReportServiceImpl implements MissingPersonReportServic
 
     @Override
     public ReportResponseDto createReport(CreateReportRequest request, Long userId) {
-       log.info("Creating report for userId: {}",userId);
+        log.info("Creating report for userId: {}", userId);
 
         MissingPersonReport report = modelMapper.map(request, MissingPersonReport.class);
         report.setStatus(ReportStatus.PENDING);
@@ -36,6 +36,7 @@ public class MissingPersonReportServiceImpl implements MissingPersonReportServic
         MissingPersonReport savedReport = reportRepository.save(report);
         return modelMapper.map(savedReport, ReportResponseDto.class);
     }
+
 
     @Override
     public List<ReportResponseDto> getAllReports() {

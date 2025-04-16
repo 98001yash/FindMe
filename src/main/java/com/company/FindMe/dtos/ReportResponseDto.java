@@ -17,6 +17,6 @@ public class ReportResponseDto {
     private Integer age;
     private String gender;
     private String lastLocation;
-    private LocalDate missingPlace;
+    private LocalDate missingSince;
     private String status;
 }
