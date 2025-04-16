@@ -12,7 +12,8 @@ public interface MissingPersonReportRepository extends JpaRepository<MissingPers
 
     List<MissingPersonReport> findByCreatedByUserId(Long userId);
 
-    List<MissingPersonReport> findByLastSeenLocationContainingIgnoreCase(String location);
+    List<MissingPersonReport> findByLastLocationContainingIgnoreCase(String location);
+    List<MissingPersonReport> findByStatusAndLastLocationContainingIgnoreCase(ReportStatus status, String location);
 
-    List<MissingPersonReport> findByStatusAndLastSeenLocationContainingIgnoreCase(ReportStatus status, String location);
+
 }

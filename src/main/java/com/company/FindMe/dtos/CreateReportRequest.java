@@ -15,7 +15,7 @@ public class CreateReportRequest {
     private String fullName;
     private Integer age;
     private String gender;
-    private String lastSeenLocation;
+    private String lastLocation;
     private String description;
     private LocalDate missingSince;
     private String contactPhone;

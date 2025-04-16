@@ -16,7 +16,7 @@ public class ReportResponseDto {
     private String fullName;
     private Integer age;
     private String gender;
-    private String lastSeenLocation;
+    private String lastLocation;
     private LocalDate missingPlace;
     private String status;
 }
