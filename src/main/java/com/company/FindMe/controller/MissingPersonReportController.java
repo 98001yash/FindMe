@@ -60,4 +60,10 @@ public class MissingPersonReportController {
         ReportResponseDto response = reportService.updateReportStatus(id, status);
         return ResponseEntity.ok(response);
     }
+    @GetMapping("/user/{userId}")
+    public ResponseEntity<List<ReportResponseDto>> getReportByUserId(@PathVariable Long userId){
+        log.info("Received request to fetch reports created by userId: {}",userId);
+        List<ReportResponseDto> responses = reportService.getReportByUserId(userId);
+        return ResponseEntity.ok(responses);
+    }
 }
